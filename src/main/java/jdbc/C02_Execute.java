@@ -15,10 +15,9 @@ public class C02_Execute {
 
         //Record'lari gormek icin executeQuery() method'unu kullanmaliyiz.
         ResultSet result1=st.executeQuery(sql1);
+
         while (result1.next()) {
-
             System.out.println(result1.getString("country_name"));
-
         }
 
         //2.Örnek: "region_id"nin 2'den büyük olduğu "country_id" ve "country_name" değerlerini çağırın.
