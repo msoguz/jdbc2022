@@ -54,13 +54,14 @@ public class C05_PreparedStatement {
 
     }
 
+
     //TODO:2. Örnek: "SELECT * FROM <table name>" query'sini prepared statement ile kullanın.
 
     // Bir tablonun istenilen data'sini prepared statement ile cagirmak icin kullanilan method.
         public static void read_data(Connection con, String tableName) {
 
             try {
-                String query = String.format("SELECT * FROM %s", tableName);// format methodu dinamik bir String olusturmak icin.
+                String query = String.format("SELECT * FROM %s", tableName);// format methodu dinamik bir String olusturmak icin kullanilir.
 
                 Statement statement=con.createStatement();
                 //SQL query'yi calistir.
