@@ -10,7 +10,7 @@ public class C07_DBWork {
         Connection con=null;
        try{
            Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/"+dbName, user,password);
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/"+dbName, user, password);
             if(con!=null){
                 System.out.println("Baglanti saglandi");
             }else{
@@ -29,7 +29,7 @@ public class C07_DBWork {
         //Statement objesi olustur.
         Statement statement;
         try{
-            String query="CREATE TABLE " + tableName+"(empId SERIAL, name VARCHAR(200),email VARCHAR(200), salary INTEGER, PRIMARY KEY(empId))";
+            String query="CREATE TABLE " + tableName+"(empId SERIAL, name VARCHAR(200), email VARCHAR(200), salary INTEGER, PRIMARY KEY(empId))";
             statement=con.createStatement();
 
             statement.executeUpdate(query);
